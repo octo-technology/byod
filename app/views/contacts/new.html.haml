@@ -1,0 +1,6 @@
+= simple_form_for @contact, :html => { :class => 'form-horizontal' } do |f|
+  = f.input :email, :wrapper => :prepend, :label => false do
+    = content_tag :span, 'E-mail', :class => 'add-on'
+    = f.input_field :email
+    = f.button :submit, "S'inscrire", :class => 'btn-primary btn-large'
+    %p.help-block= "Promis, nous ne vous spamerons pas !"
