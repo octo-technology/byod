@@ -6,8 +6,6 @@ gem 'haml', '3.1.6'
 gem 'jquery-rails'
 gem 'json'
 gem 'simple_form', '2.0.2'
-gem 'sqlite3'
-gem 'thin'
 
 # Gems used only for assets and not required
 # in production environments by default.
