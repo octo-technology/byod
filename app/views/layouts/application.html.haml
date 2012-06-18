@@ -32,13 +32,10 @@
           %a.close{:href => "#", 'data-dismiss' => 'alert'} ×
           %p
             = message
-      %header.jumbotron.subhead
-        .inner
-          %h1= 'BYOD Manifesto'
-          %p= "BYOD C'est de la boule de balle !"
       = yield
 
-    %footer
+    %footer.footer
       .container
+        %p=raw "BYOD Manifesto, licensed under #{link_to 'http://creativecommons.org/licenses/by/3.0/', 'CC BY 3.0'}."
 
     = javascript_include_tag 'application'
