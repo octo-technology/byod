@@ -4,20 +4,21 @@
 %header#overview.jumbotron.subhead
   .subnav
     %ul.nav.nav-pills
-      %li= link_to 'Manisfeste', '#manisfesto'
-      %li= link_to 'Nos Engagements', '#engagments'
-      %li= link_to 'What', '#what'
+      %li= link_to 'Le manifeste', '#manisfesto'
+      %li= link_to 'BYOD ?', '#what'
+      %li= link_to 'Le contrat de confiance', '#engagments'
+      %li= link_to 'FAQ', '#faq'
+      %li= link_to 'Informez moi !', '#sign_up'
+      %li= link_to 'Signataires', '#enterprises'
       %li= link_to "Conditions d'utilisation", '#terms_of_usage'
-      %li= link_to 'Adhérer', '#sign_up'
-      %li= link_to 'Signer le manifeste', '#enterprises'
 
 
 %section#manisfesto
   .hero-unit
     %h1= 'BYOD Manifesto'
-    %p=raw "Nous croyons que l'on travaille mieux avec les outils qu'on a <strong>choisi soi-même.</strong>"
-    %p=raw "En conséquence, nous croyons à la <strong>ré-appropriation de l’outil de travail</strong> par l'employé."
-    %p=raw "Nous croyons qu'employeur et employé peuvent établir <strong>un contrat de confiance</strong> autour de la propriété et des usages des outils de travail."
+    %p=raw "Nous croyons qu'on travaille mieux avec les outils qu'on a <strong>choisi soi-même</strong>,"
+    %p=raw "En conséquence, nous croyons à la <strong>ré-appropriation de l’outil de travail</strong> par l'employé,"
+    %p=raw "Nous croyons qu'employeur et employé peuvent établir <strong>un contrat de confiance</strong> autour de la propriété et des usages des outils de travail,"
     %p=raw "Nous souhaitons partager nos expériences entre organisations souhaitant <strong>mettre en oeuvre la dynamique BYOD</strong>."
 
     = simple_form_for @contact, :html => { :class => 'form-horizontal' } do |f|
@@ -29,9 +30,21 @@
         %p.help-block= "Promis, nous ne vous spamerons pas !"
 
 
+%section#what
+  .page-header
+    %h1
+      = 'BYOD ?'
+      %small= "Bring Your Own Device"
+  .row
+    .span12
+      %p= "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum."
+      %p= "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum."
+      %p= "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum."
+
+
 %section#engagments
   .page-header
-    %h1= 'Nos engagements'
+    %h1= 'Le contrat de confiance'
   .row
     .span6
       %blockquote
@@ -43,23 +56,9 @@
         %small= "L'employé"
 
 
-%section#what
+%section#faq
   .page-header
-    %h1
-      = 'What'
-      %small= "What"
-  .row
-    .span12
-      %p= "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum."
-      %p= "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum."
-      %p= "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum."
-
-
-%section#terms_of_usage
-  .page-header
-    %h1
-      = "Conditions d'utilisation"
-      %small= "Creative Commons"
+    %h1= 'FAQ'
   .row
     .span12
       %p= "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum."
@@ -69,7 +68,7 @@
 
 %section#sign_up
   .page-header
-    %h1= "Adhérer"
+    %h1= "Informez moi !"
   .row
     = simple_form_for @contact, :html => { :class => 'form-horizontal' } do |f|
       = f.input :email, :wrapper => :prepend, :label => false do
@@ -87,8 +86,18 @@
 %section#enterprises
   .page-header
     %h1
-      = "Signer le manifeste"
+      = "Signataires"
       %small= "En tant qu'entreprise ou influenceur"
+  .row
+    .span12
+      %p= "Carousel avec les logos des signataires et un lien vers un PDF de leur implementation."
+
+
+%section#terms_of_usage
+  .page-header
+    %h1
+      = "Conditions d'utilisation"
+      %small= "Creative Commons"
   .row
     .span12
       %p= "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum."
