@@ -5,44 +5,29 @@
   .subnav
     %ul.nav.nav-pills
       %li= link_to 'Le manifeste', '#manisfesto'
-      %li= link_to 'BYOD ?', '#what'
       %li= link_to 'Le contrat de confiance', '#engagments'
+      %li= link_to 'Le BYOD ?', '#le_byod'
+      %li= link_to 'La Charte OCTO Technology', '#charte_octo_technology'
       %li= link_to 'FAQ', '#faq'
-      %li= link_to 'Informez moi !', '#sign_up'
-      %li= link_to 'Signataires', '#enterprises'
-      %li= link_to "Conditions d'utilisation", '#terms_of_usage'
+      %li= link_to 'Informez moi !', '#informez_moi'
+      %li= link_to 'Signataires', '#signataires'
+      %li= link_to "Conditions d'utilisation", '#conditions_utilisation'
 
 
 %section#manisfesto
   .hero-unit
     %h1= 'BYOD Manifesto'
-    %p=raw "Nous croyons qu'on travaille mieux avec les outils qu'on a <strong>choisi soi-même</strong>,"
+    %p.double-quote=raw "Nous croyons qu'on travaille mieux avec les outils qu'on a <strong>choisi soi-même</strong>,"
     %p=raw "En conséquence, nous croyons à la <strong>ré-appropriation de l’outil de travail</strong> par l'employé,"
     %p=raw "Nous croyons qu'employeur et employé peuvent établir <strong>un contrat de confiance</strong> autour de la propriété et des usages des outils de travail,"
     %p=raw "Nous souhaitons partager nos expériences entre organisations souhaitant <strong>mettre en oeuvre la dynamique BYOD</strong>."
 
     = simple_form_for @contact, :html => { :class => 'form-horizontal' } do |f|
       = f.input :email, :wrapper => :prepend, :label => false do
-        %h2= 'Je suis intéressé'
         = content_tag :span, 'E-mail', :class => 'add-on'
         = f.input_field :email, placeholder: 'email@domaine.com'
-        = f.button :submit, "S'inscrire", :class => 'btn-primary btn-large'
+        = f.button :submit, "Tenez-moi informé", :class => 'btn-primary btn-large'
         %p.help-block= "Promis, nous ne vous spamerons pas !"
-
-
-%section#what
-  .page-header
-    %h1
-      = 'BYOD ?'
-      %small= "Bring Your Own Device"
-  .row
-    .span12
-      %p= "BYOD signifie <strong>Bring Your Own Device</strong>. On trouve une définition courte sur {link_to 'http://fr.wikipedia.org/wiki/BYOD','la version française de Wikipedia'}, et une plus complète sur {link_to 'http://en.wikipedia.org/wiki/Bring_your_own_device','la version anglaise.'}" 
-      %p= "On peut appréhender le BYOD selon deux grands modèles, décrits ci dessous. "
-      %h2= "Le BYOD de commodité"
-      %p= "Le premier consiste à autoriser un accès ponctuel des terminaux des employés à certains services du SI : emails, calendriers, Intranet, etc. Ce modèle est généralement proposé pour proposer un accès supplémentaire au SI, en complément des outils de travail fournis par l’entreprise. Il ne constitue pas une alternative au poste de travail d’entreprise “classique”. Il existe des cas où l’employé bénéficie d’un environnement de travail amélioré car il décide d’emporter son matériel au travail : on peut évoquer le cas de personnes qui utilisent leurs tablettes personnelles pour prendre des notes en réunion. Nous considérons que ce cas est comparable au précédent."
-      %h2= "Le BYOD “intégral”" 
-      %p= "Le second modèle est beaucoup plus tranché : il consiste à proposer aux employés d’acheter eux même leurs outils de travail (smartphone et/ou ordinateur). C’est ce modèle que nous qualifions de “vrai” BYOD sur ce site, et c’est celui qui nous intéresse. Les bénéfices attendus de ce modèle sont : maximiser l’efficacité des employés, car on travaille mieux avec les outils qu’on a choisi soi même ; Le soin que le collaborateur apporte à un matériel qui lui appartient ; éviter au collaborateur de gérer deux appareils iso-fonctionnels, en particulier de transporter deux téléphones au quotidien."
 
 
 %section#engagments
@@ -59,6 +44,90 @@
         %small= "L'employé"
 
 
+%section#le_byod
+  .page-header
+    %h1= 'Le BYOD ?'
+  .row
+    .span12
+      %p=raw "BYOD signifie <strong>Bring Your Own Device</strong>. On trouve une définition courte sur #{link_to 'la version française de Wikipedia', 'http://fr.wikipedia.org/wiki/BYOD'}, et une plus complète sur #{link_to 'la version anglaise', 'http://en.wikipedia.org/wiki/Bring_your_own_device'}."
+      %p= "On peut appréhender le BYOD selon deux grands modèles, décrits ci dessous. "
+      
+      %h2= "Le BYOD de commodité"
+      %p= "Le premier consiste à autoriser un accès ponctuel des terminaux des employés à certains services du SI : emails, calendriers, Intranet, etc. Ce modèle est généralement proposé pour proposer un accès supplémentaire au SI, en complément des outils de travail fournis par l’entreprise. Il ne constitue pas une alternative au poste de travail d’entreprise “classique”."
+      %p= "Il existe des cas où l’employé bénéficie d’un environnement de travail amélioré car il décide d’emporter son matériel au travail : on peut évoquer le cas de personnes qui utilisent leurs tablettes personnelles pour prendre des notes en réunion. Nous considérons que ce cas est comparable au précédent."
+      
+      %h2= "Le BYOD “intégral”" 
+      %p= "Le second modèle est beaucoup plus tranché : il consiste à proposer aux employés d’acheter eux même leurs outils de travail (Smartphone et/ou Laptop). C’est ce modèle que nous qualifions de “vrai” BYOD sur ce site, et c’est celui qui nous intéresse."
+      %p= "Les bénéfices attendus de ce modèle sont :"
+      %ul
+        %li= "Maximiser l’efficacité des employés, car on travaille mieux avec les outils qu’on a choisi soi même ;"
+        %li= "Le soin que le collaborateur apporte à un matériel qui lui appartient ;"
+        %li= "Éviter au collaborateur de gérer deux appareils iso-fonctionnels, en particulier de transporter deux téléphones au quotidien."
+
+
+%section#charte_octo_technology
+  .page-header
+    %h1= 'La Charte OCTO Technology ?'
+  .row
+    .span12
+      %h2= "Charte COD (Company Owned Device)"
+      %p= "Chez OCTO Techonlogy, on a intitulé Company Owned Device, le modèle qui précéde l’initiative BYOD chez OCTO Technology. Il concerne les consultants et managers de la société."
+      %p= "Ce paragraphe décrit ses modalités."
+
+      %h3= "Types de devices"
+      %p=raw "Le modèle concerne les Laptop, Smartphones et clefs 3G.<br />L’employeur en est propriétaire."
+
+      %h3= "Modalités de fourniture"
+      %p= "On fournit aux consultants un Laptop, un Smartphone et un forfait téléphonique :"
+      %ul
+        %li= "Le consultant choisit son Laptop dans les gammes de Dell ou Apple. Il doit rester en deçà d’un plafond en euros. L’employeur achète le Laptop."
+        %li= "Certains consultants reçoivent une clef 3G + forfait data, s’ils démontrent qu’ils en ont besoin."
+        %li= "Le consultant choisit son Smartphone dans un catalogue opérateur intégrant iPhone, Android, Windows Phone. L’employeur achète le Smartphone à l’opérateur. Il fournit au consultant le Smartphone et un forfait voix + data."
+
+      %h3= "Accès au SI & gestion de parc"
+      %p= "Les appareils (Laptops et Smartphones) ont un accès intégral au SI consultant (à l’exception du SI de gestion financière qui ne les concerne pas)."
+      %p= "La gestion du parc est déléguée aux consultants : aucune télédistribution, ni contrôle à distance n’est effectuée sur les appareils. Des recommandations sont cependant émises sur les mots de passe pour l’accès aux appareils, sur leur chiffrement, leur géolocalisation et effacement à distance en cas de vol."
+      %p= "Le support est fourni par la communauté des consultants : ils utilisent une base de connaissance et des listes de diffusion."
+
+      %h3= "Modalités de renouvellement"
+      %p=raw "Le renouvellement des Laptops a lieu tous les 3 ans pour les PC, tous les 4 ans pour les Mac.<br />Le renouvellement des Smartphones est fait en fonction de négociations avec l’opérateur."
+
+      %h3= "Cas du vol et de la casse"
+      %p= "L’employeur dispose d’un stock de vieux Laptops et Smartphones qui sont affectés aux consultants en cas de vol ou de casse."
+
+      %h3= "Engagements du salarié"
+      %p= "Le salarié s’engage à prendre raisonnablement soin du matériel fourni par son employeur, et a appliquer de bonnes pratiques pour éviter le vol à l’arrache dans les lieux publics."
+
+      %h3= "Engagements de l’employeur"
+      %p=raw "L’employeur s’engage à ne pas solliciter les employés hors des heures de travail convenues.<br />Le consultant est autorisé à emporter ces appareils chez lui les soirs et weekends. Leur usage à titre personnel est toléré."
+
+      %h2= "Modèle BYOD"
+      %p=raw "Le BYOD doit rester un choix : il se fait donc sur la base du volontariat.<br />Le consultant peut donc rester sur le modèle COD."
+
+      %h3= "Types de devices"
+      %p= "Le modèle BYOD concerne les Smartphones et forfaits à ce jour."
+
+      %h3= "Modalités de fourniture "
+      %p= "A son arrivé dans l’entreprise, soit le salarié dispose d’un Smartphone + forfait, soit il en achète un."
+
+      %h3= "Accès au SI & support"
+      %p= "Les règles du COD s’appliquent de la même manière :"
+      %ul
+        %li= "Les Smartphones ont un accès intégral au SI consultant (à l’exception du SI de gestion financière qui ne les concerne pas) ;"
+        %li= "La gestion des Smartphones est déléguée aux consultants : aucune télédistribution, ni contrôle à distance n’est effectuée sur les appareils. Des recommandations sont cependant émises sur les mots de passe pour l’accès aux appareils, sur leur chiffrement, leur géolocalisation et effacement à distance en cas de vol ;"
+        %li= "Le support est fourni par la communauté des consultants : ils utilisent une base de connaissance et des listes de diffusion. Modalités de renouvellement."
+
+      %h3= "Cas du vol et de la casse"
+      %p= "En cas de casse/perte, le consultant doit racheter un Smartphone en moins de 3 jours."
+
+      %h3= "Engagements du salarié"
+      %p=raw "Le salarié s’engage à être joignable durant les horaires de travail, sur le numéro inscrit dans l’annuaire d’entreprise.<br />Son forfait doit lui permettre d'appeler ses collégues et clients (dans son pays) quand c’est nécessaire, ce qui signifie que son forfait est non bloqué.<br />Son Smartphone et son forfait lui permettent d'accéder à ses emails & à son agenda professionnels."
+
+      %h3= "Engagements de l’employeur"
+      %p=raw "L’employeur s'engage à ne pas appeler les employés hors des heures de travail convenues.<br />L’employeur s'engage à ne pas surveiller l'usage personnel de l'employé (pas d'ingérence dans la vie privée).<br />L’employeur s'engage à indemniser forfaitairement l'employé afin de couvrir ses frais relatifs à l'abonnement et au Smartphone."
+
+
+
 %section#faq
   .page-header
     %h1= 'FAQ'
@@ -69,7 +138,7 @@
       %p= "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum."
 
 
-%section#sign_up
+%section#informez_moi
   .page-header
     %h1= "Informez moi !"
   .row
@@ -77,7 +146,7 @@
       = f.input :email, :wrapper => :prepend, :label => false do
         = content_tag :span, 'E-mail', :class => 'add-on'
         = f.input_field :email, placeholder: 'email@domaine.com'
-        = f.button :submit, "S'inscrire", :class => 'btn-primary btn-large'
+        = f.button :submit, "Tenez-moi informé", :class => 'btn-primary btn-large'
         %p.help-block= "Promis, nous ne vous spamerons pas !"
   .row
     .span12
@@ -86,7 +155,7 @@
       %p= "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum."
 
 
-%section#enterprises
+%section#signataires
   .page-header
     %h1
       = "Signataires"
@@ -96,7 +165,7 @@
       %p= "Carousel avec les logos des signataires et un lien vers un PDF de leur implementation."
 
 
-%section#terms_of_usage
+%section#conditions_utilisation
   .page-header
     %h1
       = "Conditions d'utilisation"

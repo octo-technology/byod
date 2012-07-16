@@ -20,18 +20,13 @@
     .navbar.navbar-fixed-top
       .navbar-inner
         .container
-          %a.btn.btn-navbar{:data => {:target => ".nav-collapse", :toggle => "collapse"}}
-            %span.icon-bar
-            %span.icon-bar
-            %span.icon-bar
-            = link_to 'Bring Your Own Device Manifesto', root_path, class: 'brand pull-left'
+          = link_to 'Bring Your Own Device Manifesto', root_path, class: 'brand pull-left'
   
     .container
       - flash.each do |type, message|
         .alert{ "data-alert" => "alert", :class => twitterized_type(type) }
-          %a.close{:href => "#", 'data-dismiss' => 'alert'} ×
-          %p
-            = message
+          = link_to '×', '#', class: 'close', :'data-dismiss' => 'alert'
+          %p= message
       = yield
 
     %footer.footer
