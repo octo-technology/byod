@@ -169,9 +169,13 @@
   .page-header
     %h1
       = "Conditions d'utilisation"
-      %small= "Creative Commons"
+      %small= 'Licence Creative Commons'
   .row
     .span12
-      %p= "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum."
-      %p= "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum."
-      %p= "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum."
+      %p= link_to image_tag('http://i.creativecommons.org/l/by-nc/3.0/88x31.png', alt: 'Licence Creative Commons', border: '0'), 'http://creativecommons.org/licenses/by-nc/3.0/', target: '_blank', rel: 'license'
+      %p
+        %span{'xmlns:dct' => 'http://purl.org/dc/terms/', href: 'http://purl.org/dc/dcmitype/Text', property: 'dct:title', rel: 'dct:type'}= 'BYOD Manifesto'
+        = ' de '
+        = link_to 'www.byod-manifesto.com', 'http://www.byod-manifesto.com/', target: '_blank', 'xmlns:cc' => 'http://creativecommons.org/ns#', property: 'cc:attributionName', rel: 'cc:attributionURL'
+        = 'est mis à disposition selon les termes de la '
+        = link_to "licence Creative Commons Attribution - Pas d'Utilisation Commerciale 3.0 non transposé", 'http://creativecommons.org/licenses/by-nc/3.0/', target: '_blank', rel: 'license'
