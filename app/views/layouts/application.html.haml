@@ -21,6 +21,11 @@
       .navbar-inner
         .container
           = link_to 'Bring Your Own Device Manifesto', root_path, class: 'brand pull-left'
+          %ul.nav
+            %li= link_to 'Manifeste', root_path
+            %li= link_to 'Exemples', exemples_path
+            %li= link_to 'FAQ', faq_path
+
   
     .container
       - flash.each do |type, message|
