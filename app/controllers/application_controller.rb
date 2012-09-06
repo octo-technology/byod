@@ -6,6 +6,7 @@ class ApplicationController < ActionController::Base
 
   def ensure_domain
     domain = 'http://www.byod-manifesto.org/'
+    raise request.host.inspect
     head :moved_permanently, :location => domain unless request.host == domain
   end
 
