@@ -1,5 +1,6 @@
 $navbarHeight: 100px;
 $navbarLinkColorHover: #666;
+$textColor: #555;
 @import 'bootstrap';
 body { padding-top: 120px; }
 @import 'bootstrap-responsive';
@@ -7,10 +8,10 @@ body { padding-top: 120px; }
 
 .navbar {
   .brand {
-    padding: 15px 40px 0 13px;
+    padding: 15px 40px 15px 13px;
   }
   .nav > li {
-    padding: 45px 20px;
+    padding: 78px 20px 0;
     a {
       text-shadow: none;
       font-size: 16px;
@@ -39,6 +40,7 @@ body { padding-top: 120px; }
     text-align: center;
     margin-bottom: 40px;
     font-size: 40px;
+    color: #936573;
   }
   h3 {
     margin: 70px 0 10px;
@@ -112,7 +114,7 @@ section {
 /* supporting docs pages */
 .subhead {
   padding-bottom: 0;
-  margin-bottom: 9px;
+  margin: 10px 0 0;
 }
 .subhead h1 {
   font-size: 54px;
