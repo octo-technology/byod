@@ -10,7 +10,7 @@ gem 'simple_form', '2.0.2'
 # Gems used only for assets and not required
 # in production environments by default.
 group :assets do
-  gem 'bootstrap-sass', '2.0.3.1'
+  gem 'bootstrap-sass', git: 'git://github.com/thomas-mcdonald/bootstrap-sass.git'
   gem 'coffee-rails', '~> 3.2.1'
   gem 'sass-rails',   '~> 3.2.3'
 
