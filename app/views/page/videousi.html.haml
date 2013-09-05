@@ -3,7 +3,13 @@
 .page-header
   %h1= 'Vidéo USI 2013 : le BYOD confronté au quotidien de la DSI'
 
-
-<p align="center">
-<iframe class="player" frameborder="0" scrolling="no" allowfullscreen="true" webkitallowfullscreen="true" mozallowfullscreen="true" src="http://playertv-octo.pad-playertv.brainsonic.com/web//player-html5-012dd4e1afa4cd7fb8a48a51063d565b.html" width="490" height="316"><noframes><img alt="Le BYOD confronté au quotidien de la DSI" src="http://playertv-octo.pad-playertv.brainsonic.com/web/index.php/ressources/media/photo-10964-le-byod-confronte-au-quotidien-de-la-dsi.html" /><h2>Le BYOD confronté au quotidien de la DSI</h2><p>"On peut appréhender le Bring Your Own Device selon deux modèles : l’achat de l’outil de travail par le collaborateur, ou bien l’autorisation à connecter un appareil personnel au SI.</p><p>Le premier modèle pose des problématiques sociales et financières. Mais n’est-il pas inexorable dans le contexte de la consumérisation de l’IT ? Le poste de travail verrouillé par la DSI n’est-il pas un héritage d’un autre âge ? La session présentera diverses initiatives dans les entreprises françaises et leurs retours d’expérience.</p><p>Quoiqu’il arrive, les deux modèles posent la question d’un compromis acceptable entre la sécurité du SI et une gestion de parc pas trop intrusive sur un appareil personnel. Ainsi deux écoles s’affrontent : celle du Mobile Device Management, et celle du Mobile Application Management.</p><p>Cette session vous permettra d’y voir plus clair dans les enjeux du BYOD.</p><p>Nous vous inviterons aussi à partager vos retours d’expérience sur byod-manifesto.org"</p></noframes></iframe>
-</p>
+%p{:align => "center"}
+  %iframe.player{:allowfullscreen => "true", :frameborder => "0", :height => "316", :mozallowfullscreen => "true", :scrolling => "no", :src => "http://playertv-octo.pad-playertv.brainsonic.com/web//player-html5-012dd4e1afa4cd7fb8a48a51063d565b.html", :webkitallowfullscreen => "true", :width => "490"}
+    %noframes
+      %img{:alt => "Le BYOD confronté au quotidien de la DSI", :src => "http://playertv-octo.pad-playertv.brainsonic.com/web/index.php/ressources/media/photo-10964-le-byod-confronte-au-quotidien-de-la-dsi.html"}/
+      %h2 Le BYOD confronté au quotidien de la DSI
+      %p "On peut appréhender le Bring Your Own Device selon deux modèles : l’achat de l’outil de travail par le collaborateur, ou bien l’autorisation à connecter un appareil personnel au SI.
+      %p Le premier modèle pose des problématiques sociales et financières. Mais n’est-il pas inexorable dans le contexte de la consumérisation de l’IT ? Le poste de travail verrouillé par la DSI n’est-il pas un héritage d’un autre âge ? La session présentera diverses initiatives dans les entreprises françaises et leurs retours d’expérience.
+      %p Quoiqu’il arrive, les deux modèles posent la question d’un compromis acceptable entre la sécurité du SI et une gestion de parc pas trop intrusive sur un appareil personnel. Ainsi deux écoles s’affrontent : celle du Mobile Device Management, et celle du Mobile Application Management.
+      %p Cette session vous permettra d’y voir plus clair dans les enjeux du BYOD.
+      %p Nous vous inviterons aussi à partager vos retours d’expérience sur byod-manifesto.org"
