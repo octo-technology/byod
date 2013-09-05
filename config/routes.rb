@@ -1,11 +1,10 @@
 ByodManifesto::Application.routes.draw do
 
-	match 'exemples' => 'page#exemples'
-	match 'videousi' => 'page#videousi'
+  match 'exemples' => 'page#exemples'
 
-	resources :faq, only: [:index]
-	resources :contacts, only: [:new, :create]
+  resources :faq, only: [:index]
+  resources :contacts, only: [:new, :create]
 
-	root :to => 'contacts#new'
+  root :to => 'contacts#new'
 
 end
